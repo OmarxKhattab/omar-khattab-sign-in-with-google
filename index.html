@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Omar Khattab Sign In With Google</title>
+  <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+  <div id="g_id_onload"
+       data-client_id="130315363819-9ke31209ocru8cpopah16gqfluvluofr.apps.googleusercontent.com"
+       data-callback="handleCredentialResponse"
+       data-auto_prompt="false">
+  </div>
+
+  <div class="g_id_signin"
+       data-type="standard"
+       data-size="large"
+       data-theme="outline"
+       data-text="sign_in_with"
+       data-shape="rectangular"
+       data-logo_alignment="left">
+  </div>
+
+  <div id="user-info">
+    <img id="user-pic" alt="User Picture" />
+    <div class="user-details">
+      <h2 id="user-name"></h2>
+      <p id="user-email"></p>
+    </div>
+    <button id="logout-btn" class="download-btn">Sign out</button>
+  </div>
+
+  <div id="confirm-dialog" class="hidden" role="dialog" aria-modal="true" aria-labelledby="confirm-title" aria-describedby="confirm-desc">
+    <div class="confirm-content">
+      <h3 id="confirm-title">
+        <i class="fa-solid fa-circle-exclamation"></i> Please Confirm...
+      </h3>
+      <hr />
+      <p id="confirm-desc">Do you want to sign out of your account?</p>
+      <div class="buttons reverse">
+        <button class="btn-no download-btn"><i class="fa-solid fa-xmark"></i> Cancel</button>
+        <button class="btn-yes download-btn"><i class="fa-solid fa-check"></i> OK</button>
+      </div>
+    </div>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
